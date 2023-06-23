@@ -1,0 +1,39 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: black;
+            color:seagreen
+        }
+    </style>
+
+    <title>Django</title>
+</head>
+<body>
+    <!-- <h3>Name: {{nm}} Duration : {{du}}  Total seats : {{st}}</h3>
+    <h3>{{txt | truncatewords:2}}</h3> -->
+    <!-- <h3>{{dt | time:'H:i'}}</h3>
+    <h3>{{dt | date:'SHORT_DATE_FORMAT'}}</h3> -->
+    {% comment %} {% if nm %}
+    <h3>Hello {{nm}}</h3>
+    {% endif %} {% endcomment %}
+    {% comment %} <h3>{{student}}</h3>
+    <h3>{{student.stu1}}</h3>
+    <h3>{{student.stu1.name}}</h3>
+    <h3>{{student.stu4.roll}}</h3> {% endcomment %}
+    {% comment %} {{data}} {% endcomment %}
+    {% for key, value in data.items%}
+    {% comment %} {{key}} = {{value}}<br> {% endcomment %}
+    {% for k, v in value.items %}
+    {{forloop.parentloop.counter}} {{k}} = {{v}} <br>
+    {% endfor %}
+    {% endfor %} 
+    
+</body>
+</html>
